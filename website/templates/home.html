@@ -40,7 +40,7 @@
 
 {% else %}
      
-
+<div class="col-md-6 offset-md-3">
     <h1>Login</h1>
     <br/>
     <form action="{% url 'home'%}" method="POST">
@@ -55,6 +55,8 @@
             <button type="submit" class="btn btn-primary">Login</button>
           </form>
     </form>
+
+  </div>
 
 {% endif %}
 {% endblock %}
