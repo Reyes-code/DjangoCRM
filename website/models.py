@@ -15,9 +15,10 @@ class Order(models.Model):
         return sum(item.total_price for item in self.items.all())
 
     customer_name = models.CharField(max_length=50)
-    email = models.EmailField(blank=True)  # Optional email for customer contact
+    address = models.CharField(max_length=100)  # Optional email for customer contact
     phone_number = models.CharField(max_length=20)  # Allow for international formats
     created_at = models.DateTimeField(auto_now_add=True)
+    order_delivery_date = models.DateTimeField()
     payment_status = models.CharField(max_length=20, choices=[
         ('pending', 'Pending'),
         ('paid', 'Paid'),

@@ -8,7 +8,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    list_display = ('pk', 'customer_name', 'email', 'phone_number', 'created_at', 'payment_status', 'delivery_status','total_order')
+    list_display = ('pk', 'customer_name', 'address', 'phone_number', 'created_at', 'order_delivery_date','payment_status', 'delivery_status','total_order')
     search_fields = ('customer_name', 'email', 'phone_number')
 
 @admin.register(OrderItem)
