@@ -21,7 +21,7 @@ def home(request):
             return redirect('home')
     else:
 
-        return render(request, 'home.html',{'orders':orders})
+        return render(request, 'home.html',{'orders':orders},)
 
 def logout_user(request):
     logout(request)
@@ -45,3 +45,8 @@ def register_user(request):
         return render(request,'register.html',{"form":form})
     return render(request,'register.html',{"form":form})
 
+'''def order_record(request,pk):
+    if request.user.is_authenticated():
+        order_record = Order.objects.get(id=pk)
+        return render(request, 'order.hmtl' 
+        '''

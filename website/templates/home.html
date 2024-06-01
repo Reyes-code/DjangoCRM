@@ -24,7 +24,7 @@
         <tr>  
           <td>{{order.id}}</td>
           <td>{{order.customer_name}}</td> 
-          <td>{{order.phone}}</td>
+          <td>{{order.phone_number}}</td>
           <td>{{order.address}}</td>
           <td>{{order.payment_status}}</td>
           <td>{{order.order_delivery_date}}</td>
@@ -32,6 +32,14 @@
         </tr>
         {% endfor %}
       {%endif%}
+
+<!--       {%if orderItem%}
+      {% for i in orderItem %}
+      <tr>  
+        <td>{{orderItem.total_price}}</td>
+      </tr>
+      {% endfor %}
+    {%endif%} -->
   
   </tbody>
 </table>
